@@ -10,7 +10,7 @@ content.createFluid('anorthite')
 .setTemperature(1500)
 .isFinite()
 .register()
-
+/*
 // Create molten titanium
 content.createFluid('titanium')
 .setColor(0x525C82)
@@ -23,3 +23,4 @@ content.createFluid('titanium')
 .setTemperature(2000)
 .isFinite()
 .register()
+*/
