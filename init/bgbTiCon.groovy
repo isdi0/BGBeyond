@@ -1,5 +1,5 @@
-import static postInit.GlobalVars.*
-import static postInit.TiConMaterialBuilder.*
+import static preInit.GlobalVars.*
+import static init.TiConMaterialBuilder.*
 
 new TiConMaterialBuilder('titanium', 0xC8C8FF)
 .head(600, 8f, 5f, 3) // durability, miningSpeed, attack, harvestLevel
