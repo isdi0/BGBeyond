@@ -1,0 +1,25 @@
+{
+  "packName": "Boldly Going Beyond",
+  "packId": "bgbeyond",
+  "author": "eridanisys",
+  "version": "DEV01",
+  "debug": true,
+  "loaders": {
+    "preInit": [
+      "classes/",
+      "preInit/"
+    ],
+    "init": [
+      "init/"
+    ],
+    "postInit": [
+      "postInit/"
+    ]
+  },
+  "packmode": {
+    "values": [],
+    "default": "",
+    "_comment": "By default the packmode is not synced with the packmode mod. You can enable integration, but you can no longer change packmode on the fly.",
+    "integratePackmodeMod": false
+  }
+}
