@@ -1,4 +1,4 @@
-import static GlobalVars.*
+import static postInit.GlobalItems.*
 
 // Removing unwanted items / recipes
 mods.jei.ingredient.removeAndHide(vanillaCraftingTable)

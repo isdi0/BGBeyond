@@ -1,4 +1,4 @@
-class GlobalVars{
+class GlobalItems{
 // Work stations
     final static def vanillaCraftingTable = item('minecraft:crafting_table')
     final static def craftingStation = item('tconstruct:tooltables')
