@@ -19,7 +19,6 @@ class GlobalItems{
     // Processed materials
     final static def ingotTitanium = ore('ingotTitanium')
     final static def dustTitanium = ore('dustTitanium')
-    final static def dustTitaniumAR = item('libvulpes:productdust', 7)
     final static def fluidAnorthite = fluid('anorthite')
 
     // Semi-finished materials
