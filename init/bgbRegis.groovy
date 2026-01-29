@@ -1,0 +1,12 @@
+// Create molten anorthite
+content.createFluid('anorthite')
+.setColor(0x656565)
+.setMetalTexture()
+.setTexture(resource('tconstruct:blocks/fluids/molten_metal'), resource('tconstruct:blocks/fluids/molten_metal_flow'))
+.setDensity(2000)
+.setLavaMaterial()
+.setSound(sound('minecraft:item.bucket.fill_lava'), sound('minecraft:item.bucket.empty_lava'))
+.setLuminosity(10)
+.setTemperature(1500)
+.isFinite()
+.register()
