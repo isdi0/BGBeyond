@@ -1,6 +1,5 @@
 import slimeknights.tconstruct.library.TinkerRegistry
 import slimeknights.tconstruct.library.materials.*
-import slimeknights.tconstruct.library.fluid.FluidMolten
 import slimeknights.tconstruct.library.traits.ITrait
 import slimeknights.tconstruct.library.utils.HarvestLevels
 
@@ -8,35 +7,8 @@ public class TiConMaterialBuilder {
     private final Material material
     private boolean built = false
 
-    TiConMaterialBuilder(String identifier, int materialColor) {
-        this.material = new Material(identifier, materialColor)
-    }
-    // --- Fluid ---
-    /*
-    Registers a molten version of the material. Technially optional, but required for use in the smeltery.
-    @param fluidName    The identifier of the molten fluid
-    @param fluidColor   The color of the molten fluid (default: materialColor)
-    @param still        The texture of the fluid when still (default: resource('tconstruct:blocks/fluids/molten_metal'))
-    @param flow         The texture of the fluid when flowing (default: resource('tconstruct:blocks/fluids/molten_metal_flow'))
-    */
-    public TiConMaterialBuilder molten(String fluidName, int fluidColor, ResourceLocation still, ResourceLocation flow) {
-        fluid.FluidMolten(fluidName, fluidColor, still, flow)
-        return this
-    }
-
-    public TiConMaterialBuilder molten(String fluidName, ResourceLocation still, ResourceLocation flow) {
-        fluid.FluidMolten(fluidName, materialColor, still, flow)
-        return this
-    }
-
-    public TiConMaterialBuilder molten(String fluidName, int fluidColor) {
-        fluid.FluidMolten(fluidName, fluidColor, resource('tconstruct:blocks/fluids/molten_metal'), resource('tconstruct:blocks/fluids/molten_metal_flow'))
-        return this
-    }
-
-    public TiConMaterialBuilder molten(String fluidName) {
-        fluid.FluidMolten(fluidName, materialColor, resource('tconstruct:blocks/fluids/molten_metal'), resource('tconstruct:blocks/fluids/molten_metal_flow'))
-        return this
+    TiConMaterialBuilder(String identifier, int color) {
+        this.material = new Material(identifier, color)
     }
 
     /*
