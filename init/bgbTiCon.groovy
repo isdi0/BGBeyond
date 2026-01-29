@@ -1,4 +1,4 @@
-import static preInit.GlobalVars.*
+import static GlobalVars.*
 import static init.TiConMaterialBuilder.*
 
 new TiConMaterialBuilder('titanium', 0xC8C8FF)
