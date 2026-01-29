@@ -1,12 +1,6 @@
-import postInit.GlobalItems.*
+import static postInit.GlobalItems.*
 import static postInit.TiConMaterialBuilder.*
-import static slimeknights.tconstruct.library.fluid.FluidMolten
-
-new FluidMolten('titanium', 0x525C82)
-.setDensity(2000)
-.setViscosity(10000)
-.setLuminosity(10)
-.setTemperature(1500)
+import slimeknights.tconstruct.library.fluid.FluidMolten
 
 new TiConMaterialBuilder('titanium', 0xC8C8FF)
 .head(600, 8f, 5f, 3) // durability, miningSpeed, attack, harvestLevel
@@ -16,8 +10,8 @@ new TiConMaterialBuilder('titanium', 0xC8C8FF)
 .addTrait('lightweight', 'head')
 .addTrait('lightweight', 'handle')
 .addTrait('established', 'extra')
-.item(ingotTitanium)
-.fluid(fluid('titanium'))
+.item('libvulpes:productingot', 7)
+.fluid(fluid('titanium_molten'), 144)
 .build()
 
 /* 
