@@ -2,6 +2,8 @@ import slimeknights.tconstruct.library.TinkerRegistry
 import slimeknights.tconstruct.library.materials.*
 import slimeknights.tconstruct.library.traits.ITrait
 import slimeknights.tconstruct.library.utils.HarvestLevels
+import net.minecraftforge.fluids.FluidStack
+import net.minecraftforge.fluids.FluidRegistry
 
 public class TiConMaterialBuilder {
     private final Material material
@@ -97,15 +99,32 @@ public class TiConMaterialBuilder {
 
     /*
     Links a fluid to the material
-    @param fluid    The fluid object
+    @param input    The fluid's identifier, a FluidStack, or the raw fluid object
     */
-    public TiConMaterialBuilder fluid(def fluid) {
-        material.setFluid(fluid)
+    public TiConMaterialBuilder fluid(def input) {
+        // Option 1 - Input is a string
+        if (input instanceof String) {
+            def foundFluid = FluidRegistry.getFluid(input)
+            if(foundFluid != null) {
+                material.setFluid(foundFluid)
+            }
+            else {
+                println('Error: Fluid ' + input + ' not found in registry')
+            }
+        }
+        // Option 2 - Input is a FluidStack
+        else if (input instanceof FluidStack) {
+            material.setFluid(input.getFluid())
+        }
+        else {
+            material.SetFluid(input)
+        }
         return this
     }
 
-    // Explicit build method. Optional, since stats are added immediately, but useful for performing validation.
-    public Material build() {
+    // Register the material
+    public Material register() {
+        TinkerRegistry.addMaterial(material)
         this.built = true
         return this.material
     }
