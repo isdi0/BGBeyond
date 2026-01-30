@@ -1,3 +1,4 @@
+//NO_RUN
 import slimeknights.tconstruct.library.TinkerRegistry
 import slimeknights.tconstruct.library.materials.*
 import slimeknights.tconstruct.library.traits.ITrait
