@@ -1,131 +1,95 @@
 import slimeknights.tconstruct.library.TinkerRegistry
 import slimeknights.tconstruct.library.materials.*
 import slimeknights.tconstruct.library.traits.ITrait
-import slimeknights.tconstruct.library.utils.HarvestLevels
-import net.minecraftforge.fluids.FluidStack
-import net.minecraftforge.fluids.FluidRegistry
 
-public class TiConMaterialBuilder {
-    private final Material material
-    private boolean built = false
+class TiConMatBuilder {
+    String identifier
+    int color
+    Material material
+    boolean isCraftable
+    boolean isCastable
 
-    TiConMaterialBuilder(String identifier, int color) {
-        this.material = new Material(identifier, color)
+    // Constructor
+    TiConMatBuilder(String id, int col) {
+        this.identifier = id
+        this.color = col
+        // Create the raw TiC material
+        this.material = new Material(id, col)
     }
 
-    /*
-    @param durability     How long the tool lasts
-    @param miningSpeed    How fast it mines
-    @param attack         Base attack damage
-    @param harvestLevel   0=Stone, 1=Iron, 2=Diamond, 3=Obsidian, 4=Cobalt
-    */
-    public TiConMaterialBuilder head(int durability, float miningSpeed, float attack, int harvestLevel) {
-        TinkerRegistry.addMaterialStats(material, new HeadMaterialStats(durability, miningSpeed, attack, harvestLevel))
+    // --- Configuration Methods ---
+
+    def craftable() {
+        this.isCraftable = true
         return this
     }
 
-    /*
-    @param modifier      Durability multiplier
-    @param durability    Flat durability addition
-    */
-    public TiConMaterialBuilder handle(float modifier, int durability) {
+    def castable() {
+        this.isCastable = true
+        return this
+    }
+
+    // Link an item for the Part Builder
+    def addItem(def item, int value = 144) {
+        material.addItem(item, 1, value)
+        return this
+    }
+
+    // Link a fluid for Casting
+    def setFluid(def fluid) {
+        material.setFluid(fluid)
+        return this
+    }
+
+    // --- Stats Builders ---
+
+    // Head: Durability, Mining Speed, Attack, Mining Level
+    def addHeadStats(int durability, float speed, float attack, int harvestLevel) {
+        TinkerRegistry.addMaterialStats(material, new HeadMaterialStats(durability, speed, attack, harvestLevel))
+        return this
+    }
+
+    // Handle: Durability Multiplier, Flat durability boost (or loss)
+    def addHandleStats(float modifier, int durability) {
         TinkerRegistry.addMaterialStats(material, new HandleMaterialStats(modifier, durability))
         return this
     }
 
-    /*
-    @param durability  Flat durability addition
-    */
-    public TiConMaterialBuilder extra(int durability) {
-        TinkerRegistry.addMaterialStats(material, new ExtraMaterialStats(durability))
+    // Extra: Extra Durability
+    def addExtraStats(int extraDurability) {
+        TinkerRegistry.addMaterialStats(material, new ExtraMaterialStats(extraDurability))
         return this
     }
 
-    /*
-    @param drawSpeed   How much time the bow takes to draw
-    @param range       Range multiplier
-    @param bonusDamage Extra damage
-    */
-    public TiConMaterialBuilder bow(float drawSpeed, float range, float bonusDamage) {
-        TinkerRegistry.addMaterialStats(material, new BowMaterialStats(drawSpeed, range, bonusDamage)) 
+    // Bow: Draw Speed, Range, Bonus Damage
+    def addBowStats(float drawSpeed, float range, float bonusDamage) {
+        TinkerRegistry.addMaterialStats(material, new BowMaterialStats(drawSpeed, range, bonusDamage))
         return this
     }
 
     // --- Traits ---
-    /*
-    Adds a trait to the material.
-    @param traitName    The identifier string of the trait
-    @param dependency   Part dependency ("head", "handle", "extra", "bow", or null for all)
-    */
-    public TiConMaterialBuilder addTrait(String traitName, String dependency) {
-        ITrait trait = TinkerRegistry.getTrait(traitName)
+
+    def addTrait(String traitIdentifier, String dependency = null) { // dependencies: "head", "handle", "extra", "bow" (null = all parts)
+        ITrait trait = TinkerRegistry.getTrait(traitIdentifier) 
         if (trait != null) {
             material.addTrait(trait, dependency)
         }
         else {
-            println('Warning: Trait ' + traitName + 'not found for material ' + material.getIdentifier())
+            println('Warning: Trait \'${traitIdentifiier}\' not found for material \'${identifier}\'')
         }
         return this
     }
 
-    public TiConMaterialBuilder addTrait(String traitName) {
-        return addTrait(traitName, null)
+    // Finalize registration
+    def build() {
+        println('Registered TiC Material: ' + identifier)
     }
-    // --- Items ---
-    /*
-    Sets the item used to repair/build this material.
-    @param stack    The item stack
-    */
-    public TiConMaterialBuilder item(def stack) {
-        material.addItem(stack)
-        material.setRepresentativeItem(stack)
-        return this
-    }
+}
 
-    /*
-    Makes the material craftable in a part builder.
-    */
-    public TiConMaterialBuilder setCraftable() {
-        material.setCraftable()
-        return this
-    }
-
-    /*
-    Makes the material castable from a Smeltery.
-    */
-    public TiConMaterialBuilder setCastable() {
-        material.setCastable
-    }
-
-    /*
-    Links a fluid to the material
-    @param input    The fluid's identifier, a FluidStack, or the raw fluid object
-    */
-    public TiConMaterialBuilder fluid(def input) {
-        // Option 1 - Input is a string
-        if (input instanceof String) {
-            def foundFluid = FluidRegistry.getFluid(input)
-            if(foundFluid != null) {
-                material.setFluid(foundFluid)
-            }
-            else {
-                println('Error: Fluid ' + input + ' not found in registry')
-            }
-        }
-        // Option 2 - Input is a FluidStack
-        else if (input instanceof FluidStack) {
-            material.setFluid(input.getFluid())
-        }
-        else {
-            material.SetFluid(input)
-        }
-        return this
-    }
-
-    // Register the material
-    public Material register() {
-        TinkerRegistry.addMaterial(material)
-        this.built = true
-        return this.material
-    }
+// Helper closure to make the syntax cleaner
+def createMaterial(String id, int color, Closure body) {
+    def builder = new TiConMatBuilder(id, color)
+    body.delegate = builder
+    body()
+    builder.build()
 }
