@@ -130,4 +130,5 @@ mods.jei.ingredient.removeAndHide(item('muchmorespiders:meath'))
 mods.jei.ingredient.removeAndHide(item('muchmorespiders:nethermeat_h'))
 mods.jei.ingredient.removeAndHide(item('muchmorespiders:meathc'))
 mods.jei.ingredient.removeAndHide(item('muchmorespiders:mob_agressor'))
-mods.jei.ingredient.removeAndHide(item('primitivemobs:mimic_orb'));
+mods.jei.ingredient.removeAndHide(item('jsg:dhd_brb'))
+mods.jei.ingredient.removeAndHide(item('jsg:dhd_bbb'))
