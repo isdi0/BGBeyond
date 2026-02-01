@@ -22,13 +22,12 @@ for(item in stickMetalBugged){
 mods.tconstruct.melting.add(stickIron, fluid('iron') * 72, 514)
 mods.tconstruct.melting.add(stickCopper, fluid('copper') * 72, 410)
 mods.tconstruct.melting.add(stickSteel, fluid('steel') * 72, 473)
-mods.tconstruct.melting.add(stickTitanium, fluid('titanium') * 72, 619)
 
 // Add pulverizer recipe for titanium dust
 mods.thermal.pulverizer.add(2000, ingotTitanium, item('libvulpes:productdust', 7), null, 0)
 
 // Anorth(os)ite recipes
-mods.thermal.crucible.add(30000, blockAnorthosite, fluidAnorthite)
+mods.thermal.crucible.add(30000, blockAnorthosite, fluidAnorthite * 1000)
 
 // Quick sticks from logs
 crafting.addShaped(item('minecraft:stick') * 16, [[logWood],[logWood]])
