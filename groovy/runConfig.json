@@ -3,7 +3,7 @@
   "packId": "bgbeyond",
   "author": "eridanisys",
   "version": "DEV01",
-  "debug": true,
+  "debug": false,
   "loaders": {
     "preInit": [
       "classes/",
