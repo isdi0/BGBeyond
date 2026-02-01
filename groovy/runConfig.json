@@ -2,7 +2,7 @@
   "packName": "Boldly Going Beyond",
   "packId": "bgbeyond",
   "author": "eridanisys",
-  "version": "DEV01",
+  "version": "0.1.0_01",
   "debug": false,
   "loaders": {
     "preInit": [
@@ -13,7 +13,8 @@
       "init/"
     ],
     "postInit": [
-      "postInit/"
+      "postInit/",
+      "postInit/oldBG2"
     ]
   },
   "packmode": {
