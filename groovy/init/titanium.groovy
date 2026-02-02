@@ -7,7 +7,6 @@ import slimeknights.tconstruct.library.MaterialIntegration
 def material = new Material('titanium', 0xccc8fa)
 material.setCraftable(false)
 material.setCastable(true)
-material.setVisible()
 
 // Add to registry
 TinkerRegistry.addMaterial(material)
@@ -19,6 +18,9 @@ material.addItem('plateTitanium')
 material.addItem('sheetTitanium')
 material.addItem('gearTitanium', 1, 576)
 material.addItem('coilTitanium', 1, 1152)
+
+// Set the fluid
+material.setFluid(fluid('titanium').getFluid())
 
 // Set the stats
 // head
@@ -35,11 +37,6 @@ material.addTrait(TinkerRegistry.getTrait("lightweight"), "head")
 material.addTrait(TinkerRegistry.getTrait("lightweight"), "handle")
 material.addTrait(TinkerRegistry.getTrait("established"), "extra")
 
-// Integrate the material
-def integration = new MaterialIntegration(
-    material,
-    fluid('titanium').getFluid(),
-    "Titanium"
-)
-
+// Integrate the new material
 integration.integrate()
+integration.registerRenderInfo()
