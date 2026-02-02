@@ -4,12 +4,7 @@ import slimeknights.tconstruct.library.materials.*
 import slimeknights.tconstruct.library.MaterialIntegration
 
 // Define new material
-def material = new Material('titanium', 0xccc8fa)
-material.setCraftable(false)
-material.setCastable(true)
-
-// Add to registry
-TinkerRegistry.addMaterial(material)
+def material = TinkerRegistry.getMaterial('titanium')
 
 // Add items
 material.addCommonItems('Titanium')
@@ -38,6 +33,5 @@ material.addTrait(TinkerRegistry.getTrait("lightweight"), "handle")
 material.addTrait(TinkerRegistry.getTrait("established"), "extra")
 
 // Integrate the new material
-integration = new MaterialIntegration(material)
+integration = new MaterialIntegration(material, fluid('titanium').getFluid(), 'Titanium')
 integration.integrate()
-integration.registerRenderInfo()
