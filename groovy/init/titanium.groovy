@@ -38,5 +38,6 @@ material.addTrait(TinkerRegistry.getTrait("lightweight"), "handle")
 material.addTrait(TinkerRegistry.getTrait("established"), "extra")
 
 // Integrate the new material
+integration = new MaterialIntegration(material)
 integration.integrate()
 integration.registerRenderInfo()
