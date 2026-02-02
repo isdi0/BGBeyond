@@ -1,4 +1,10 @@
 import mods.jei.ingredient
+import mods.thermalexpansion.Pulverizer
+import mods.thermalexpansion.Compactor
+import mods.thermalexpansion.Crucible
+import mods.thermalexpansion.Imbuer
+import mods.thermalexpansion.Refinery
+import mods.thermalexpansion.Furnace
 
 //Remove jsg machines and redundant items
 mods.jei.ingredient.removeAndHide(item('jsg:titanium_ingot'))
@@ -105,27 +111,27 @@ furnace.removeByOutput(twoNaquadah)
 furnace.removeByOutput(twoTrinium)
 furnace.removeByInput(item('jsg:naquadah_purified'))
 furnace.removeByInput(item('jsg:trinium_purified'))
-mods.thermalexpansion.furnace.removeByInput(item('jsg:trinium_raw'))
-mods.thermalexpansion.furnace.removeByInput(item('jsg:trinium_purified'))
-mods.thermalexpansion.furnace.removeByInput(item('jsg:naquadah_raw'))
-mods.thermalexpansion.furnace.removeByInput(item('jsg:naquadah_purified'))
-mods.thermalexpansion.furnace.removeByInput(item('libvulpes:productdust', 7))
+mods.thermalexpansion.Furnace.removeByInput(item('jsg:trinium_raw'))
+mods.thermalexpansion.Furnace.removeByInput(item('jsg:trinium_purified'))
+mods.thermalexpansion.Furnace.removeByInput(item('jsg:naquadah_raw'))
+mods.thermalexpansion.Furnace.removeByInput(item('jsg:naquadah_purified'))
+mods.thermalexpansion.Furnace.removeByInput(item('libvulpes:productdust', 7))
 
 // add furnace recipes
-mods.thermalexpansion.furnace.add(2000, item('libvulpes:productdust', 7), item('libvulpes:productingot', 7))
+mods.thermalexpansion.Furnace.add(2000, item('libvulpes:productdust', 7), item('libvulpes:productingot', 7))
 
 // Titanium
 // add furnace recipes
 furnace.add(item('libvulpes:ore0', 8), item('libvulpes:productnugget', 7) * 4)
-mods.thermalexpansion.furnace.add(2000, item('libvulpes:ore0', 8), item('libvulpes:productnugget', 7) * 4)
+mods.thermalexpansion.Furnace.add(2000, item('libvulpes:ore0', 8), item('libvulpes:productnugget', 7) * 4)
 furnace.add(item('jsg:naquadah_ore'), item('jsg:naquadah_raw_nugget') * 4)
-mods.thermalexpansion.furnace.add(2000, item('jsg:naquadah_ore'), item('jsg:naquadah_raw_nugget') * 4)
+mods.thermalexpansion.Furnace.add(2000, item('jsg:naquadah_ore'), item('jsg:naquadah_raw_nugget') * 4)
 furnace.add(item('jsg:trinium_ore'), item('jsg:trinium_nugget') * 4)
-mods.thermalexpansion.furnace.add(2000, item('jsg:trinium_ore'), item('jsg:trinium_nugget') * 4)
+mods.thermalexpansion.Furnace.add(2000, item('jsg:trinium_ore'), item('jsg:trinium_nugget') * 4)
 furnace.add(item('jsg:gear_trinium'), item('jsg:trinium_ingot') * 4)
-mods.thermalexpansion.furnace.add(2000, item('jsg:gear_trinium'), item('jsg:trinium_ingot') * 4)
+mods.thermalexpansion.Furnace.add(2000, item('jsg:gear_trinium'), item('jsg:trinium_ingot') * 4)
 furnace.add(item('jsg:gear_naquadah_raw'), item('jsg:naquadah_alloy_raw') * 4)
-mods.thermalexpansion.furnace.add(2000, item('jsg:gear_naquadah_raw'), item('jsg:naquadah_alloy_raw') * 4)
+mods.thermalexpansion.Furnace.add(2000, item('jsg:gear_naquadah_raw'), item('jsg:naquadah_alloy_raw') * 4)
 
 // Add JSG's Orlin Gate recipe
 def wrench = item('thermalfoundation:wrench', 0)

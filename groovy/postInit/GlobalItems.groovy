@@ -1,3 +1,4 @@
+import postInit.GlobalItems
 class GlobalItems{
     // Work stations
     final static def vanillaCraftingTable = item('minecraft:crafting_table')
@@ -19,12 +20,18 @@ class GlobalItems{
     final static def ingotNaquadahRefined = ore('ingotNaquadahRefined')
 
     // Processed materials
+    final static def nuggetTitanium = ore('nuggetTitanium')
     final static def ingotTitanium = ore('ingotTitanium')
     final static def dustTitanium = ore('dustTitanium')
+    final static def blockTitanium = ore('blockTitanium')
     final static def fluidAnorthite = fluid('anorthite')
 
     // Semi-finished materials
+    final static def plateTitanium = ore('plateTitanium')
+    final static def sheetTitanium = ore('sheetTitanium')
+    final static def oreTitanium = ore('oreTitanium')
     final static def gearTitanium = ore('gearTitanium')
+    final static def coilTitanium = ore('coilTitanium')
     final static def stickTiAl = ore('stickTitaniumAluminide')
     final static def stickTiIr = ore('stickTitaniumIridium')
     final static def stickIron = ore('stickIron')
