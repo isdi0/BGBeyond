@@ -1,21 +1,14 @@
-import slimeknights.mantle.util.RecipeMatchRegistry
-import slimeknights.tconstruct.library.TinkerRegistry
 import slimeknights.tconstruct.library.materials.*
+import slimeknights.tconstruct.library.TinkerRegistry
 import slimeknights.tconstruct.library.MaterialIntegration
 
 // Define new material
-def material = TinkerRegistry.getMaterial('titanium')
+def material = new Material('titanium', 0xCCC8FA)
+material.setCraftable(false)
+material.setCastable(true)
 
-// Add items
-material.addCommonItems('Titanium')
-material.addItem('dustTitanium')
-material.addItem('plateTitanium')
-material.addItem('sheetTitanium')
-material.addItem('gearTitanium', 1, 576)
-material.addItem('coilTitanium', 1, 1152)
-
-// Set the fluid
-material.setFluid(fluid('titanium').getFluid())
+// Add to registry
+TinkerRegistry.addMaterial(material)
 
 // Set the stats
 // head
@@ -26,11 +19,6 @@ material.addStats(new HandleMaterialStats(0.95f, 200))
 
 // extra
 material.addStats(new ExtraMaterialStats(100))
-
-// Add traits
-material.addTrait(TinkerRegistry.getTrait("lightweight"), "head")
-material.addTrait(TinkerRegistry.getTrait("lightweight"), "handle")
-material.addTrait(TinkerRegistry.getTrait("established"), "extra")
 
 // Integrate the new material
 integration = new MaterialIntegration(material, fluid('titanium').getFluid(), 'Titanium')
