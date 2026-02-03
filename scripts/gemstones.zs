@@ -1,0 +1,115 @@
+import loottweaker.LootTweaker;
+import loottweaker.vanilla.loot.LootTable;
+import loottweaker.vanilla.loot.LootPool;
+import crafttweaker.data.IData;
+
+//Loot tables
+val desert = LootTweaker.getTable("minecraft:chests/desert_pyramid").getPool("main");
+val nether = LootTweaker.getTable("minecraft:chests/nether_bridge").getPool("main");
+val jungle = LootTweaker.getTable("minecraft:chests/jungle_temple").getPool("main");
+val dungeon = LootTweaker.getTable("minecraft:chests/simple_dungeon").getPool("main");
+val end = LootTweaker.getTable("minecraft:chests/end_city_treasure").getPool("main");
+val blacksmith = LootTweaker.getTable("minecraft:chests/village_blacksmith").getPool("main");
+val mansion = LootTweaker.getTable("minecraft:chests/woodland_mansion").getPool("main");
+val corridor = LootTweaker.getTable("minecraft:chests/stronghold_corridor").getPool("main");
+
+//Remove gemstone tools and armour
+mods.jei.JEI.removeAndHide(<projectred-exploration:ruby_axe>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:ruby_hoe>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:ruby_pickaxe>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:ruby_shovel>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:ruby_sword>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:ruby_saw>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:ruby_sickle>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:ruby_helmet>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:ruby_chestplate>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:ruby_leggings>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:ruby_boots>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:sapphire_axe>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:sapphire_hoe>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:sapphire_pickaxe>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:sapphire_shovel>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:sapphire_sword>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:sapphire_saw>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:sapphire_sickle>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:sapphire_helmet>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:sapphire_chestplate>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:sapphire_leggings>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:sapphire_boots>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:peridot_axe>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:peridot_hoe>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:peridot_pickaxe>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:peridot_shovel>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:peridot_sword>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:peridot_saw>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:peridot_sickle>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:peridot_helmet>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:peridot_chestplate>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:peridot_leggings>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:peridot_boots>);
+mods.jei.JEI.removeAndHide(<minecraft:diamond_axe>);
+mods.jei.JEI.removeAndHide(<minecraft:diamond_hoe>);
+mods.jei.JEI.removeAndHide(<minecraft:diamond_pickaxe>);
+mods.jei.JEI.removeAndHide(<minecraft:diamond_shovel>);
+mods.jei.JEI.removeAndHide(<minecraft:diamond_sword>);
+mods.jei.JEI.removeAndHide(<microblockcbe:saw_diamond>);
+mods.jei.JEI.removeAndHide(<projectred-exploration:diamond_sickle>);
+mods.jei.JEI.removeAndHide(<thermalfoundation:tool.bow_diamond>);
+mods.jei.JEI.removeAndHide(<thermalfoundation:tool.fishing_rod_diamond>);
+mods.jei.JEI.removeAndHide(<thermalfoundation:tool.shears_diamond>);
+mods.jei.JEI.removeAndHide(<thermalfoundation:tool.sickle_diamond>);
+mods.jei.JEI.removeAndHide(<thermalfoundation:tool.hammer_diamond>);
+mods.jei.JEI.removeAndHide(<thermalfoundation:tool.excavator_diamond>);
+mods.jei.JEI.removeAndHide(<thermalfoundation:tool.shield_diamond>);
+mods.jei.JEI.removeAndHide(<thermalfoundation:material:16>);
+mods.jei.JEI.removeAndHide(<thermalfoundation:material:26>);
+mods.jei.JEI.removeAndHide(<minecraft:diamond_helmet>);
+mods.jei.JEI.removeAndHide(<minecraft:diamond_chestplate>);
+mods.jei.JEI.removeAndHide(<minecraft:diamond_leggings>);
+mods.jei.JEI.removeAndHide(<minecraft:diamond_boots>);
+mods.jei.JEI.removeAndHide(<minecraft:diamond_horse_armor>);
+recipes.remove(<atum:desert_helmet_diamond>, false);
+recipes.remove(<atum:desert_chest_diamond>, false);
+recipes.remove(<atum:desert_legs_diamond>, false);
+recipes.remove(<atum:desert_boots_diamond>, false);
+recipes.addShapeless("desertHelmetPlatinum", <atum:desert_helmet_diamond>, [<atum:wanderer_helmet>,<thermalfoundation:armor.helmet_platinum>]);
+recipes.addShapeless("desertChestPlatinum", <atum:desert_chest_diamond>, [<atum:wanderer_chest>,<thermalfoundation:armor.plate_platinum>]);
+recipes.addShapeless("desertLegsPlatinum", <atum:desert_legs_diamond>, [<atum:wanderer_legs>,<thermalfoundation:armor.legs_platinum>]);
+recipes.addShapeless("desertBootsPlatinum", <atum:desert_boots_diamond>, [<atum:wanderer_boots>,<thermalfoundation:armor.boots_platinum>]);
+recipes.remove(<thermalexpansion:augment:416>, false);
+recipes.addShaped("enstabulationApparatus", <thermalexpansion:augment:416>,
+	[[null,<thermalfoundation:material:290>,null],
+	 [<thermalfoundation:tool.sword_invar>,<thermalfoundation:material:512>,<thermalfoundation:tool.sword_invar>],
+	 [null,<minecraft:piston>,null]]);
+recipes.remove(<rftools:haste_module>);
+recipes.addShaped("hasteModule", <rftools:haste_module>,
+	[[null,<midnight:tenebrum_pickaxe>,null],
+	 [<minecraft:redstone>,<minecraft:gold_ingot>,<minecraft:redstone>],
+	 [null,<minecraft:dye:0>,null]]);
+recipes.remove(<rftools:hasteplus_module>);
+recipes.addShapeless("hastePlusModule", <rftools:hasteplus_module>, [<rftools:haste_module>, <thermalfoundation:tool.pickaxe_platinum>]);
+end.removeEntry("minecraft:diamond_horse_armor");
+end.removeEntry("minecraft:diamond_helmet");
+end.removeEntry("minecraft:diamond_chestplate");
+end.removeEntry("minecraft:diamond_leggings");
+end.removeEntry("minecraft:diamond_boots");
+end.removeEntry("minecraft:diamond_pickaxe");
+end.removeEntry("minecraft:diamond_shovel");
+end.removeEntry("minecraft:diamond_sword");
+end.addItemEntry(<thermalfoundation:horse_armor_platinum>, 1);
+end.addItemEntry(<thermalfoundation:material:134>, 5);
+dungeon.removeEntry("minecraft:diamond_horse_armor");
+dungeon.addItemEntry(<thermalfoundation:horse_armor_platinum>, 5);
+blacksmith.removeEntry("minecraft:diamond_horse_armor");
+blacksmith.addItemEntry(<thermalfoundation:horse_armor_platinum>, 1);
+nether.removeEntry("minecraft:diamond_horse_armor");
+nether.addItemEntry(<thermalfoundation:horse_armor_platinum>, 3);
+desert.removeEntry("minecraft:diamond_horse_armor");
+desert.addItemEntry(<thermalfoundation:horse_armor_platinum>, 5);
+jungle.removeEntry("minecraft:diamond_horse_armor");
+jungle.addItemEntry(<thermalfoundation:horse_armor_platinum>, 1);
+mansion.removeEntry("minecraft:diamond_chestplate");
+mansion.removeEntry("minecraft:diamond_hoe");
+mansion.addItemEntry(<thermalfoundation:tool.hoe_platinum>, 15);
+corridor.removeEntry("minecraft:diamond_horse_armor");
+corridor.addItemEntry(<thermalfoundation:horse_armor_platinum>, 1);
