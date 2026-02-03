@@ -1,6 +1,7 @@
 import static postInit.GlobalItems.*
 import mods.tconstruct.melting
 import mods.advancedrocketry.precisionassembler
+import mods.thermalexpansion.Crucible
 
 // 1 gravel = 1 flint
 crafting.remove('tconstruct:common/flint')
@@ -46,3 +47,22 @@ mods.advancedrocketry.precisionassembler.recipeBuilder()
     .power(100)
     .time(400)
     .register()
+
+// add recipes for resources on the moon
+mods.thermalexpansion.Crucible.add(3200, item('minecraft:packed_ice'), fluid('water') * 2000)
+mods.thermalexpansion.Crucible.add(3200, item('biomesoplenty:hard_ice'), fluid('water') * 2000)
+mods.thermalexpansion.Crucible.add(30000, item('advancedrocketry:moonturf'), fluid('anorthite') * 1000)
+
+// Change chickenchunks chunk loader recipe
+crafting.removeByOutput(item('chickenchunks:chunk_loader'), false)
+crafting.addShaped('chunkLoader', item('chickenchunks:chunk_loader'),
+    [
+        [null, item('minecraft:ender_eye'), null],
+        [item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')],
+        [item('minecraft:gold_ingot'), item('jsg:naquadah_block'), item('minecraft:gold_ingot')]
+    ]
+)
+
+// Change silicon crafting recipes to use AE2 silicon
+mods.thermalexpansion.Compactor.removeByInput(item('libvulpes:productingot', 3))
+mods.thermalexpansion.Compactor.add(4000, compactorMode('plate'), item('appliedenergistics2:material', 5), item('libvulpes:productplate', 3))
