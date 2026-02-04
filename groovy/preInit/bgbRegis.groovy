@@ -1,3 +1,6 @@
+import zmaster587.libVulpes.api.material.AllowedProducts
+import zmaster587.libVulpes.api.material.MaterialRegistry
+
 // Create molten anorthite
 content.createFluid('anorthite')
 .setColor(0x656565)
@@ -21,3 +24,31 @@ content.createFluid('titanium')
 .setLuminosity(10)
 .setTemperature(776)
 .register()
+
+// Create silicon carbide
+    content.createItem('sic_ingot')
+    .setRarity(EnumRarity.COMMON)
+    .setCreativeTab(creativeTab('miscellaneous'))
+    .register()
+
+    content.createItem('sic_dust')
+    .setRarity(EnumRarity.COMMON)
+    .setCreativeTab(creativeTab('miscellaneous'))
+    .register()
+
+    content.createItem('sic_boule')
+    .setRarity(EnumRarity.COMMON)
+    .setCreativeTab(creativeTab('miscellaneous'))
+    .register()
+
+    content.createItem('sic_crystal')
+    .setRarity(EnumRarity.COMMON)
+    .setCreativeTab(creativeTab('miscellaneous'))
+    .register()
+
+    content.createBlock('sic_block')
+    .setLightOpacity(15)
+    .setHardness(5f)
+    .setResistance(6f)
+    .setCreativeTab(creativeTab('miscellaneous'))
+    .register()

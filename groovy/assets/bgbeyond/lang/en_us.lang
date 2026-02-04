@@ -1,3 +1,9 @@
 fluid.bgbeyond.anorthite.name=Molten Anorthite
 fluid.bgbeyond.titanium.name=Molten Titanium
-material.titanium.name=Titanium
+
+item.bgbeyond.sic_ingot.name=Silicon Carbide Ingot
+item.bgbeyond.sic_dust.name=Silicon Carbide Dust
+item.bgbeyond.sic_boule.name=Silicon Carbide Boule
+item.bgbeyond.sic_crystal.name=Silicon Carbide Crystal
+
+tile.bgbeyond.sic_block.name=Silicon Carbide Block
