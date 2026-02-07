@@ -26,22 +26,12 @@ content.createFluid('titanium')
 .register()
 
 // Create silicon carbide
-    content.createItem('sic_ingot')
-    .setRarity(EnumRarity.COMMON)
-    .setCreativeTab(creativeTab('misc'))
-    .register()
-
     content.createItem('sic_dust')
     .setRarity(EnumRarity.COMMON)
     .setCreativeTab(creativeTab('misc'))
     .register()
 
     content.createItem('sic_boule')
-    .setRarity(EnumRarity.COMMON)
-    .setCreativeTab(creativeTab('misc'))
-    .register()
-
-    content.createItem('sic_crystal')
     .setRarity(EnumRarity.COMMON)
     .setCreativeTab(creativeTab('misc'))
     .register()
