@@ -2,6 +2,7 @@ import mods.thermal.smelter
 import mods.thermal.factorizer
 import mods.thermal.compactor
 import mods.thermal.pulverizer
+import mods.advancedrocketry.electricarcfurnace
 
 // Orlin's Alloy = Titanium + Electrum
 mods.thermal.smelter.add(9600, item('libvulpes:productingot', 7) * 2, item('thermalfoundation:material', 97), item('bgbeyond:orlin_alloy_ingot') * 2, null, 0)
@@ -40,3 +41,11 @@ mods.thermal.compactor.add(4000, compactorMode('gear'), item('bgbeyond:orlin_all
 mods.thermal.compactor.add(4000, compactorMode('plate'), item('bgbeyond:orlin_alloy_ingot'), item('bgbeyond:orlin_alloy_plate'))
 
 mods.thermal.pulverizer.add(2000, item('bgbeyond:orlin_alloy_ingot'), item('bgbeyond:orlin_alloy_dust'), null, 0)
+
+mods.advancedrocketry.electricarcfurnace.recipeBuilder()
+.input(item('libvulpes:productingot', 7) * 2)
+.input(item('thermalfoundation:material', 161))
+.output(item('bgbeyond:orlin_alloy_ingot') * 2)
+.time(100)
+.power(96)
+.register()
