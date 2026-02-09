@@ -1,6 +1,3 @@
-import zmaster587.libVulpes.api.material.AllowedProducts
-import zmaster587.libVulpes.api.material.MaterialRegistry
-
 // Create molten anorthite
 content.createFluid('anorthite')
 .setColor(0x656565)
@@ -26,19 +23,52 @@ content.createFluid('titanium')
 .register()
 
 // Create silicon carbide
-    content.createItem('sic_dust')
-    .setRarity(EnumRarity.COMMON)
-    .setCreativeTab(creativeTab('misc'))
-    .register()
+content.createItem('sic_dust')
+.setRarity(EnumRarity.COMMON)
+.setCreativeTab(creativeTab('misc'))
+.register()
 
-    content.createItem('sic_boule')
-    .setRarity(EnumRarity.COMMON)
-    .setCreativeTab(creativeTab('misc'))
-    .register()
+content.createItem('sic_boule')
+.setRarity(EnumRarity.COMMON)
+.setCreativeTab(creativeTab('misc'))
+.register()
 
-    content.createBlock('sic_block')
-    .setLightOpacity(15)
-    .setHardness(5f)
-    .setResistance(6f)
-    .setCreativeTab(creativeTab('misc'))
-    .register()
+content.createBlock('sic_block')
+.setLightOpacity(15)
+.setHardness(5f)
+.setResistance(30f)
+.setCreativeTab(creativeTab('buildingBlocks'))
+.register()
+
+// Create Orlin Alloy
+content.createItem('orlin_alloy_ingot')
+.setRarity(EnumRarity.UNCOMMON)
+.setCreativeTab(creativeTab('misc'))
+.register()
+
+content.createItem('orlin_alloy_nugget')
+.setRarity(EnumRarity.UNCOMMON)
+.setCreativeTab(creativeTab('misc'))
+.register()
+
+content.createItem('orlin_alloy_dust')
+.setRarity(EnumRarity.UNCOMMON)
+.setCreativeTab(creativeTab('misc'))
+.register()
+
+content.createItem('orlin_alloy_plate')
+.setRarity(EnumRarity.UNCOMMON)
+.setCreativeTab(creativeTab('misc'))
+.register()
+
+content.createItem('orlin_alloy_gear')
+.setRarity(EnumRarity.UNCOMMON)
+.setCreativeTab(creativeTab('misc'))
+.register()
+
+content.createBlock('orlin_alloy_block', blockMaterial('iron'))
+.setLightOpacity(15)
+.setHardness(5f)
+.setResistance(40f)
+.setCreativeTab(creativeTab('buildingBlocks'))
+.register()

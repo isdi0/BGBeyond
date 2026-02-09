@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "bgbeyond:items/orlin_alloy/plate"
+  }
+}

@@ -1,4 +1,3 @@
-import postInit.GlobalItems
 class GlobalItems{
     // Work stations
     final static def vanillaCraftingTable = item('minecraft:crafting_table')
@@ -46,6 +45,15 @@ class GlobalItems{
     ]
     final static def plateNaquadahRaw = ore('plateNaquadahRaw')
     final static def plateNaquadah = ore('plateNaquadahRefined')
+    final static def plateBismaniteRaw = plateNaquadahRaw
+    final static def plateBismanite = plateNaquadah
+    final static def bouleSiliconCarbide = ore('bouleSiliconCarbide')
+    final static def bouleSiC = bouleSiliconCarbide
+    final static def dustSiliconCarbide = ore('dustSiliconCarbide')
+    final static def dustSiC = dustSiliconCarbide
+    final static def blockSiliconCarbide = ore('blockSiliconCarbide')
+    final static def blockSiC = blockSiliconCarbide
+
     // Sub-assemblies
     final static def controlBoard = item('advancedrocketry:ic:3')
     final static def itemBoard = item('advancedrocketry:ic:4')

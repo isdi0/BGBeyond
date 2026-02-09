@@ -1,9 +1,13 @@
 fluid.bgbeyond.anorthite.name=Molten Anorthite
 fluid.bgbeyond.titanium.name=Molten Titanium
 
-item.bgbeyond.sic_ingot.name=Silicon Carbide Ingot
-item.bgbeyond.sic_dust.name=Silicon Carbide Dust
 item.bgbeyond.sic_boule.name=Silicon Carbide Boule
-item.bgbeyond.sic_crystal.name=Silicon Carbide Crystal
+item.bgbeyond.sic_dust.name=Silicon Carbide Dust
+item.bgbeyond.orlin_alloy_ingot.name=Orlin's Alloy Ingot
+item.bgbeyond.orlin_alloy_nugget.name=Orlin's Alloy Nugget
+item.bgbeyond.orlin_alloy_dust.name=Orlin's Alloy Blend
+item.bgbeyond.orlin_alloy_plate.name=Orlin's Alloy Plate
+item.bgbeyond.orlin_alloy_gear.name=Orlin's Alloy Gear
 
 tile.bgbeyond.sic_block.name=Silicon Carbide Block
+tile.bgbeyond.orlin_alloy_block.name=Orlin's Alloy Block

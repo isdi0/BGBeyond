@@ -1,7 +1,16 @@
+import org.embeddedt.embeddium.impl.gui.framework.TextFormattingStyle
+import com.cleanroommc.groovyscript.compat.vanilla.Rarity
+import li.cil.oc.util.Rarity
 import static postInit.GlobalItems.*
 import mods.tconstruct.melting
 import mods.advancedrocketry.precisionassembler
 import mods.thermalexpansion.Crucible
+import net.minecraft.util.text.TextFormatting
+
+// Add silicon carbide to oredict
+oredict.add('bouleSiliconCarbide', item('bgbeyond:sic_boule'))
+oredict.add('dustSiliconCarbide', item('bgbeyond:sic_dust'))
+oredict.add('blockSiliconCarbide', block('bgbeyond:sic_block'))
 
 // 1 gravel = 1 flint
 crafting.remove('tconstruct:common/flint')
@@ -66,3 +75,6 @@ crafting.addShaped('chunkLoader', item('chickenchunks:chunk_loader'),
 // Change silicon crafting recipes to use AE2 silicon
 mods.thermalexpansion.Compactor.removeByInput(item('libvulpes:productingot', 3))
 mods.thermalexpansion.Compactor.add(4000, compactorMode('plate'), item('appliedenergistics2:material', 5), item('libvulpes:productplate', 3))
+
+// Orlin alloy
+item('bgbeyond:orlin_alloy_block').setRarity(TextFormatting.YELLOW)
