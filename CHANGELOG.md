@@ -1,0 +1,1 @@
+- Removed thermal innovation, as it wasn't adding anything that Tinkers' didn't already.
