@@ -1,4 +1,3 @@
-import org.embeddedt.embeddium.impl.gui.framework.TextFormattingStyle
 import com.cleanroommc.groovyscript.compat.vanilla.Rarity
 import li.cil.oc.util.Rarity
 import static postInit.GlobalItems.*
@@ -49,7 +48,7 @@ crafting.addShaped(item('libvulpes:productgear', 7), [[null, ingotTitanium, null
 // Control Circuit Base recipe
 crafting.removeByOutput(item('jsg:circuit_control_base'))
 mods.advancedrocketry.precisionassembler.recipeBuilder()
-    .input(controlBoard, crystalRed * 2)
+    .input(controlBoard, item('minecraft:redstone') * 8)
     .fluidInput(blendWhite * 144)
     .output(item('jsg:circuit_control_base'))
     .fluidOutput(blendBlack * 72)
