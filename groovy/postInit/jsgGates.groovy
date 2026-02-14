@@ -1,4 +1,5 @@
 import mods.advancedrocketry.precisionassembler
+import mods.advancedrocketry.crystallizer
 
 // ORLIN GATE
 def wrench = item('thermalfoundation:wrench', 0)
@@ -73,7 +74,7 @@ uniChevron.output(item('jsg:schematic_universe'))
 
 // power & time
 uniChevron.power(250)
-uniChevron.time(600)
+uniChevron.time(400)
 
 uniChevron.register()
 
@@ -165,7 +166,7 @@ mwChevron.output(item('jsg:schematic_milkyway'))
 
 // power & time
 mwChevron.power(250)
-mwChevron.time(750)
+mwChevron.time(500)
 
 mwChevron.register()
 
@@ -189,8 +190,27 @@ mwDialer.time(600)
 
 mwDialer.register()
 
+// DHD Control Crystal
+crafting.removeByOutput(item('jsg:crystal_control_dhd'))
+def mwCrystal = mods.advancedrocketry.crystallizer.recipeBuilder()
 
-/*
+// inputs
+mwCrystal.input(item('jsg:circuit_control_naquadah'))
+mwCrystal.input(item('minecraft:redstone') * 32)
+
+mwCrystal.fluidInput(fluid('silicon_molten_white') * 576)
+
+// outputs
+mwCrystal.output(item('jsg:crystal_control_dhd'))
+
+mwCrystal.fluidOutput(fluid('silicon_molten_black') * 288)
+
+// power & time
+mwCrystal.power(125)
+mwCrystal.time(1200)
+
+mwCrystal.register()
+
 // PEGASUS
 // Base
 def pegBase = mods.advancedrocketry.precisionassembler.recipeBuilder()
@@ -199,9 +219,9 @@ def pegBase = mods.advancedrocketry.precisionassembler.recipeBuilder()
 pegBase.input(item('jsg:schematic_pegasus'))
 pegBase.input(item('jsg:fragment_stargate_pegasus') * 2)
 pegBase.input(item('appliedenergistics2:material', 24))
-pegBase.input(item('appliedenergistics2:material', 16) * 2)
-pegBase.input(item('appliedenergistics2:material', 3) * 4)
-pegBase.input(item('thermalfoundation:material', 352) * 2)
+pegBase.input(item('appliedenergistics2:material', 23))
+pegBase.input(item('appliedenergistics2:material', 20) * 2)
+pegBase.input(item('libvulpes:productplate', 7) * 2)
 
 // outputs
 pegBase.output(item('jsg:stargate_pegasus_base_block'))
@@ -209,7 +229,7 @@ pegBase.output(item('jsg:schematic_pegasus'))
 
 // power & time
 pegBase.power(250)
-pegBase.time(1200)
+pegBase.time(1800)
 
 pegBase.register()
 
@@ -220,7 +240,8 @@ def pegRing = mods.advancedrocketry.precisionassembler.recipeBuilder()
 pegRing.input(item('jsg:schematic_pegasus'))
 pegRing.input(item('jsg:fragment_stargate_pegasus') * 3)
 pegRing.input(item('thermalfoundation:material', 513) * 2)
-pegRing.input(item('thermalfoundation:material', 352)  * 2)
+pegRing.input(item('thermalfoundation:material', 515))
+pegRing.input(item('libvulpes:productplate', 7)  * 2)
 
 // outputs
 pegRing.output(item('jsg:stargate_pegasus_member_block', 6) * 2)
@@ -228,7 +249,7 @@ pegRing.output(item('jsg:schematic_pegasus'))
 
 // power & time
 pegRing.power(250)
-pegRing.time(600)
+pegRing.time(900)
 
 pegRing.register()
 
@@ -238,10 +259,10 @@ def pegChevron = mods.advancedrocketry.precisionassembler.recipeBuilder()
 // inputs
 pegChevron.input(item('jsg:schematic_pegasus'))
 pegChevron.input(item('jsg:fragment_stargate_pegasus') * 2)
-pegChevron.input(item('appliedenergistics2:material', 18))
-pegChevron.input(ore('projredIllumar') * 2)
-pegChevron.input(ore('blockGlassHardened'))
-pegChevron.input(item('thermalfoundation:material', 352))
+pegChevron.input(item('appliedenergistics2:material', 22))
+pegChevron.input(item('projectred-illumination:lamp', 3))
+pegChevron.input(ore('blockGlassReinforced'))
+pegChevron.input(item('libvulpes:productplate', 7))
 
 // outputs
 pegChevron.output(item('jsg:stargate_pegasus_member_block', 14))
@@ -251,4 +272,24 @@ pegChevron.output(item('jsg:schematic_pegasus'))
 pegChevron.power(250)
 pegChevron.time(600)
 
-pegChevron.register() */
+pegChevron.register()
+
+// Dialer
+def pegDialer = mods.advancedrocketry.precisionassembler.recipeBuilder()
+
+// inputs
+pegDialer.input(item('jsg:schematic_pegasus'))
+pegDialer.input(item('appliedenergistics2:material', 22))
+pegDialer.input(item('advancedrocketry:ic', 2) * 4)
+pegDialer.input(item('thermalfoundation:material', 103) * 8)
+pegDialer.input(item('libvulpes:productplate', 7) * 4)
+
+// outputs
+pegDialer.output(item('jsg:dhd_pegasus_block'))
+pegDialer.output(item('jsg:schematic_pegasus'))
+
+// power & time
+pegDialer.power(250)
+pegDialer.time(750)
+
+pegDialer.register()
