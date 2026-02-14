@@ -45,17 +45,6 @@ crafting.addShaped(item('minecraft:stick') * 16, [[logWood],[logWood]])
 crafting.removeByOutput(item('libvulpes:productgear', 7))
 crafting.addShaped(item('libvulpes:productgear', 7), [[null, ingotTitanium, null], [ingotTitanium, null, ingotTitanium], [null, ingotTitanium, null]])
 
-// Control Circuit Base recipe
-crafting.removeByOutput(item('jsg:circuit_control_base'))
-mods.advancedrocketry.precisionassembler.recipeBuilder()
-    .input(controlBoard, item('minecraft:redstone') * 8)
-    .fluidInput(blendWhite * 144)
-    .output(item('jsg:circuit_control_base'))
-    .fluidOutput(blendBlack * 72)
-    .power(100)
-    .time(400)
-    .register()
-
 // add recipes for resources on the moon
 mods.thermalexpansion.Crucible.add(3200, item('minecraft:packed_ice'), fluid('water') * 2000)
 mods.thermalexpansion.Crucible.add(3200, item('biomesoplenty:hard_ice'), fluid('water') * 2000)
@@ -77,3 +66,16 @@ mods.thermalexpansion.Compactor.add(4000, compactorMode('plate'), item('appliede
 
 // Orlin alloy
 item('bgbeyond:orlin_alloy_block').setRarity(TextFormatting.YELLOW)
+
+// Change blockGlassHardened oredicts
+oredict.clear('blockGlassHardened')
+oredict.add('blockGlassHardened', item('thermalfoundation:glass', 3))
+
+for(int i = 0; i < 8; i++) {
+    oredict.add('blockGlassReinforced', item('thermalfoundation:glass', i))
+}
+
+for(int i = 0; i < 7; i++) {
+    oredict.add('blockGlassReinforced', item('thermalfoundation:glass_alloy', i))
+    oredict.add('blockGlassAlloyReinforced', item('thermalfoundation:glass_alloy', i))
+}
