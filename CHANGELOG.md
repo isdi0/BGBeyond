@@ -7,3 +7,4 @@
 - added unremoval of thermal innovation
   - (thermal innovation is still in the pack)
 - fixed cooling times for some tinkers casting recipes
+- only normal hardened glass (lead + obsidian) counts for usual recipes, the rest are now used as "reinforced glass." they're not renamed though, just used differently in recipes.
