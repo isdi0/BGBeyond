@@ -1,5 +1,3 @@
-import mods.advancedrocketry.chemicalreactor
-
 // Rocket fuel from O2 and H2
 def rocketFuel = mods.advancedrocketry.chemicalreactor.recipeBuilder()
 
@@ -10,7 +8,7 @@ rocketFuel.fluidInput(fluid('hydrogen') * 10)
 // Output
 rocketFuel.fluidOutput(fluid('rocketfuel') * 20)
 
-// Power & Time
+// Power & time
 rocketFuel.power(10)
 rocketFuel.time(100)
 
@@ -26,7 +24,7 @@ scrubberRecycle.input(item('advancedrocketry:carbonscrubbercartridge', 32766))
 scrubberRecycle.output(item('advancedrocketry:carbonscrubbercartridge'))
 scrubberRecycle.output(item('minecraft:coal'))
 
-// Power & Time
+// Power & time
 scrubberRecycle.power(20)
 scrubberRecycle.time(40)
 
@@ -42,7 +40,74 @@ boneMeal.fluidInput(fluid('nitrogen') * 10)
 // Output
 boneMeal.output(item('minecraft:dye', 15) * 8)
 
+// Power & time
 boneMeal.power(20)
 boneMeal.time(100)
 
 boneMeal.register()
+
+// == AE2 CRYSTALS ==
+
+def fluix = item('appliedenergistics2:material', 7) | item('appliedenergistics2:material', 12)
+
+// CERTUS
+def certusQuartz = mods.advancedrocketry.crystallizer.recipeBuilder()
+// Item variables
+certusSeed = item('appliedenergistics2:crystal_seed').withNbt(['progress': 600])
+certusPure = item('appliedenergistics2:material', 10)
+
+// Inputs
+certusQuartz.input(fluix)
+certusQuartz.input(certusSeed)
+
+certusQuartz.fluidInput(fluid('water') * 250)
+
+// Output
+certusQuartz.output(certusPure)
+
+// Power & time
+certusQuartz.power(75)
+certusQuartz.time(1200)
+
+certusQuartz.register()
+
+// NETHER
+def netherQuartz = mods.advancedrocketry.crystallizer.recipeBuilder()
+// Item variables
+netherSeed = item('appliedenergistics2:crystal_seed', 600).withNbt(['progress': 600])
+netherPure = item('appliedenergistics2:material', 11)
+
+// Inputs
+netherQuartz.input(fluix)
+netherQuartz.input(netherSeed)
+
+netherQuartz.fluidInput(fluid('water') * 250)
+
+// Output
+netherQuartz.output(netherPure)
+
+// Power & time
+netherQuartz.power(75)
+netherQuartz.time(1200)
+
+netherQuartz.register()
+
+// FLUIX
+def fluixCrystal = mods.advancedrocketry.crystallizer.recipeBuilder()
+// Item variables
+fluixSeed = item('appliedenergistics2:crystal_seed', 1200).withNbt(['progress': 1200])
+fluixPure = item('appliedenergistics2:material', 12)
+
+// Inputs
+fluixCrystal.input(fluixSeed)
+
+fluixCrystal.fluidInput(fluid('water') * 250)
+
+// Output
+fluixCrystal.output(fluixPure)
+
+// Power & time
+fluixCrystal.power(125)
+fluixCrystal.time(1800)
+
+fluixCrystal.register()
