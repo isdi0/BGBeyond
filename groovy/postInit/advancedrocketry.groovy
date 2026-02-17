@@ -46,6 +46,22 @@ boneMeal.time(100)
 
 boneMeal.register()
 
+// Silicon Boules from Silicon
+def siliconBoule = mods.advancedrocketry.crystallizer.recipeBuilder()
+
+// Input
+siliconBoule.input(item('appliedenergistics2:material', 5))
+
+// Output
+siliconBoule.output(item('libvulpes:productboule', 3))
+
+// Power & time
+siliconBoule.power(20)
+siliconBoule.time(300)
+
+siliconBoule.register()
+
+
 // == AE2 CRYSTALS ==
 
 def fluix = item('appliedenergistics2:material', 7) | item('appliedenergistics2:material', 12)
@@ -58,12 +74,12 @@ certusPure = item('appliedenergistics2:material', 10)
 
 // Inputs
 certusQuartz.input(fluix)
-certusQuartz.input(certusSeed)
+certusQuartz.input(certusSeed * 3)
 
-certusQuartz.fluidInput(fluid('water') * 250)
+certusQuartz.fluidInput(fluid('water') * 1000)
 
 // Output
-certusQuartz.output(certusPure)
+certusQuartz.output(certusPure * 3)
 
 // Power & time
 certusQuartz.power(75)
@@ -79,12 +95,12 @@ netherPure = item('appliedenergistics2:material', 11)
 
 // Inputs
 netherQuartz.input(fluix)
-netherQuartz.input(netherSeed)
+netherQuartz.input(netherSeed * 3)
 
 netherQuartz.fluidInput(fluid('water') * 250)
 
 // Output
-netherQuartz.output(netherPure)
+netherQuartz.output(netherPure * 3)
 
 // Power & time
 netherQuartz.power(75)
@@ -99,12 +115,12 @@ fluixSeed = item('appliedenergistics2:crystal_seed', 1200).withNbt(['progress': 
 fluixPure = item('appliedenergistics2:material', 12)
 
 // Inputs
-fluixCrystal.input(fluixSeed)
+fluixCrystal.input(fluixSeed * 3)
 
 fluixCrystal.fluidInput(fluid('water') * 250)
 
 // Output
-fluixCrystal.output(fluixPure)
+fluixCrystal.output(fluixPure * 3)
 
 // Power & time
 fluixCrystal.power(125)
