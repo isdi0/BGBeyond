@@ -143,3 +143,18 @@ mods.advancedrocketry.precisionassembler.recipeBuilder()
     .power(100)
     .time(400)
     .register()
+
+// Empty Capacitor Bank recipe
+crafting.removeByOutput(item('jsg:capacitor_block_empty'))
+mods.advancedrocketry.precisionassembler.recipeBuilder()
+    .input(item('jsg:naquadah_block'), item('jsg:circuit_control_naquadah'), item('minecraft:redstone') * 16)
+    .fluidInput(fluid('silicon_molten_white') * 576)
+    .output(item('jsg:capacitor_block_empty'))
+    .fluidOutput(fluid('silicon_molten_black') * 288)
+    .power(100)
+    .time(600)
+    .register()
+
+// Capacitor Bank recipe
+mods.thermal.transposerfill.removeByOutput(item('jsg:capacitor_block'))
+mods.thermal.transposerfill.add(15000, item('jsg:capacitor_block_empty'), fluid('redstone') * 3200, item('jsg:capacitor_block'), 100)

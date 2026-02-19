@@ -72,3 +72,25 @@ content.createBlock('orlin_alloy_block', blockMaterial('iron'))
 .setResistance(40f)
 .setCreativeTab(creativeTab('buildingBlocks'))
 .register()
+
+// Niobium
+content.createBlock('niobium_ore', blockMaterial('rock'))
+.setLightOpacity(15)
+.setHardness(3f)
+.setCreativeTab(creativeTab('buildingBlocks'))
+.register()
+
+content.createBlock('niobium_block', blockMaterial('rock'))
+.setLightOpacity(15)
+.setHardness(5f)
+.setResistance(40f)
+.setCreativeTab(creativeTab('buildingBlocks'))
+.register()
+
+content.createItem('niobium_ingot')
+.setCreativeTab(creativeTab('misc'))
+.register()
+
+content.createItem('niobium_nugget')
+.setCreativeTab(creativeTab('misc'))
+.register()
