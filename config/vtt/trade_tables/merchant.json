@@ -1,0 +1,121 @@
+{
+    "Profession": "vtt:merchant",
+    "Career": "merchant",
+    "Offers": 
+	{
+        "Recipes": 
+		[
+			{
+				action:"add", CareerLevel:1,
+				buy:
+				{
+					id:"biomesoplenty:gem",
+					Damage:1,
+					Count:{min:5,max:10}
+				},
+				sell:
+				{
+					id:"minecraft:emerald",
+					Count:1
+				}
+			},
+			{
+				action:"add", CareerLevel:1,
+				buy:
+				{
+					id:"biomesoplenty:gem",
+					Damage:2,
+					Count:{min:5,max:10}
+				},
+				sell:
+				{
+					id:"minecraft:emerald",
+					Count:1
+				}
+			},
+			{
+				action:"add", CareerLevel:1,
+				buy:
+				{
+					id:"biomesoplenty:gem",
+					Damage:3,
+					Count:{min:5,max:10}
+				},
+				sell:
+				{
+					id:"minecraft:emerald",
+					Count:1
+				}
+			},
+			{
+				action:"add", CareerLevel:1,
+				buy:
+				{
+					id:"biomesoplenty:gem",
+					Damage:4,
+					Count:{min:5,max:10}
+				},
+				sell:
+				{
+					id:"minecraft:emerald",
+					Count:1
+				}
+			},
+			{
+				action:"add", CareerLevel:1,
+				buy:
+				{
+					id:"biomesoplenty:gem",
+					Damage:5,
+					Count:{min:5,max:10}
+				},
+				sell:
+				{
+					id:"minecraft:emerald",
+					Count:1
+				}
+			},
+			{
+				action:"add", CareerLevel:1,
+				buy:
+				{
+					id:"biomesoplenty:gem",
+					Damage:6,
+					Count:{min:5,max:10}
+				},
+				sell:
+				{
+					id:"minecraft:emerald",
+					Count:1
+				}
+			},
+			{
+				action:"add", CareerLevel:1,
+				buy:
+				{
+					id:"biomesoplenty:gem",
+					Damage:7,
+					Count:{min:5,max:10}
+				},
+				sell:
+				{
+					id:"minecraft:emerald",
+					Count:1
+				}
+			},
+			{
+				action:"add", CareerLevel:5,
+				buy:
+				{
+					id:"minecraft:emerald",
+					Count:{min:10,max:20}
+				},
+				sell:
+				{
+					id:"biomesoplenty:record_wanderer",
+					Count:1
+				}
+			}
+        ]
+    }
+}

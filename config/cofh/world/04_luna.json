@@ -1,0 +1,28 @@
+{
+	"populate": 
+	{
+		"ice_cave": {
+			"distribution": "uniform",
+			"generator": {
+				"type": "lake",
+				"block": "minecraft:packed_ice"
+			},
+			"cluster-count": 1,
+			"min-height": 10,
+			"max-height": 40,
+			"chunk-chance": 10,
+			"retrogen": true,
+			"biome": {
+				"restriction": "blacklist",
+				"value": []
+			},
+			"dimension": {
+				"restriction": "whitelist",
+				"value": 
+				[
+					100
+				]
+			}
+		}
+	}
+}

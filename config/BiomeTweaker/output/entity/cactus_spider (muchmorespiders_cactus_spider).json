@@ -1,0 +1,6 @@
+
+{
+  "Name": "cactus_spider",
+  "Registry ID": "muchmorespiders:cactus_spider",
+  "Class": "muchmorespiders.common.entity.EntityCactusSpider"
+}

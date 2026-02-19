@@ -1,0 +1,6 @@
+
+{
+  "Name": "survivor",
+  "Registry ID": "mozombies_wave:survivor",
+  "Class": "wily.mozombieswave.entity.EntitySurvivor"
+}

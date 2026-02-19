@@ -1,0 +1,6 @@
+
+{
+  "Name": "shell_spider",
+  "Registry ID": "muchmorespiders:shell_spider",
+  "Class": "muchmorespiders.common.entity.EntityShellSpider"
+}

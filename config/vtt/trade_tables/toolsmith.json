@@ -1,0 +1,39 @@
+{
+    "Profession": "minecraft:smith",
+    "Career": "tool",
+    "Offers": 
+	{
+        "Recipes": 
+		[
+			{
+				action:"clear", CareerLevel:3
+			},
+			{
+				action:"add", CareerLevel:3,
+				buy:
+				{
+					id:"minecraft:diamond",
+					Count:{min:3,max:4}
+				},
+				sell:
+				{
+					id:"minecraft:emerald",
+					Count:1
+				}
+			},
+			{
+				action:"add", CareerLevel:3,
+				buy:
+				{
+					id:"minecraft:emerald",
+					Count:{min:11,max:13}
+				},
+				sell:
+				{
+					id:"thermalfoundation:tool.pickaxe_steel",
+					Count:1
+				}
+			}
+        ]
+    }
+}

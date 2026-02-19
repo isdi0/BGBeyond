@@ -1,0 +1,6 @@
+
+{
+  "Name": "slime_spider",
+  "Registry ID": "muchmorespiders:slime_spider",
+  "Class": "muchmorespiders.common.entity.EntitySlimeSpider"
+}

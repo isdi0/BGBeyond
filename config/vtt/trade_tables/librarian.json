@@ -1,0 +1,48 @@
+{
+    "Profession": "minecraft:librarian",
+    "Career": "librarian",
+    "Offers": 
+	{
+        "Recipes": 
+		[
+			{
+				action:"clear", CareerLevel:1
+			},
+			{
+				action:"clear", CareerLevel:4
+			},
+			{
+				action:"clear", CareerLevel:5
+			},
+			{
+				action:"clear", CareerLevel:6
+			},
+			{
+				action:"add", CareerLevel:1,
+				buy:
+				{
+					id:"minecraft:paper",
+					Count:{min:24,max:36}
+				},
+				sell:
+				{
+					id:"minecraft:emerald",
+					Count:1
+				}
+			},
+			{
+				action:"add", CareerLevel:4,
+				buy:
+				{
+					id:"minecraft:emerald",
+					Count:{min:20,max:22}
+				},
+				sell:
+				{
+					id:"minecraft:name_tag",
+					Count:1
+				}
+			}
+        ]
+    }
+}

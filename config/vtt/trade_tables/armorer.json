@@ -1,0 +1,39 @@
+{
+    "Profession": "minecraft:smith",
+    "Career": "armor",
+    "Offers": 
+	{
+        "Recipes": 
+		[
+			{
+				action:"clear", CareerLevel:3
+			},
+			{
+				action:"add", CareerLevel:3,
+				buy:
+				{
+					id:"minecraft:diamond",
+					Count:{min:3,max:4}
+				},
+				sell:
+				{
+					id:"minecraft:emerald",
+					Count:1
+				}
+			},
+			{
+				action:"add", CareerLevel:3,
+				buy:
+				{
+					id:"minecraft:emerald",
+					Count:{min:14,max:16}
+				},
+				sell:
+				{
+					id:"thermalfoundation:armor.plate_steel",
+					Count:1
+				}
+			}
+        ]
+    }
+}

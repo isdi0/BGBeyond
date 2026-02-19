@@ -1,0 +1,6 @@
+
+{
+  "Name": "power_spider",
+  "Registry ID": "muchmorespiders:power_spider",
+  "Class": "muchmorespiders.common.entity.EntityPowerSpider"
+}

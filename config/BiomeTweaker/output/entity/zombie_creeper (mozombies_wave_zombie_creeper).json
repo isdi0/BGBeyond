@@ -1,0 +1,6 @@
+
+{
+  "Name": "zombie_creeper",
+  "Registry ID": "mozombies_wave:zombie_creeper",
+  "Class": "wily.mozombieswave.entity.EntityZombieCreeper"
+}

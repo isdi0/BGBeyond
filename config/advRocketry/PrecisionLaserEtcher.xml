@@ -1,0 +1,170 @@
+<!-->
+	IMPORTANT NOTICE TO MODPACK MAKERS!!!!
+	
+	XML recipes are being DEPRECATED soon.
+	This means that recipes registered via the XML for MACHINES will no longer work
+	To avoid issues that may arise from this, please either distribute a RESOURCE PACK
+	with relevant JSON recipes OR user Craft tweaker + Advanced rocketry tweaker (3rd party)
+	https://minecraft.curseforge.com/projects/advanced-rocketry-tweaker
+	
+	IMPORTANT NOTICE TO MODPACK MAKERS!!!!
+	
+	
+	<Recipe timeRequired="NUMBER" power="NUMBER">
+		<input>
+			<fluidStack>FLUID NAME;SIZE</fluidStack>
+			<itemStack>ITEM_NAME;SIZE;META</itemStack>
+			<oreDict>OREDICT_NAME;SIZE</oreDict>
+        </input>
+		<output>
+			<fluidStack>FLUID_NAME;SIZE</fluidStack>
+			<itemStack>ITEM_NAME;SIZE;META</itemStack>
+			<oreDict>OREDICT_NAME;SIZE</oreDict>
+		</output>
+	</Recipe>
+	
+	Can have Multiple In/Outputs
+	Some Machines can only Accept either Fluids or Items
+	
+	timeRequired="NUMBER"	how long a Recipe takes, Unit is in Ticks.
+	power="NUMBER" how much Power the Recipes takes per Tick. Unit is in RF.
+	
+	The "useDefault" attribute will prevent loading of recipes if set to "false"
+<!-->
+<Recipes useDefault="false">
+	<Recipe timeRequired="600" power ="300">
+		<input>
+			<itemStack>refinedstorage:silicon;1</itemStack>
+			<itemStack>jsg:trinium_dust;2</itemStack>
+			<itemStack>minecraft:quartz;3</itemStack>
+			<itemStack>jsg:circuit_control_base;1</itemStack>
+		</input>
+		<output>
+			<itemStack>jsg:circuit_control_crystal;1</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="600" power ="300">
+		<input>
+			<itemStack>jsg:naquadah_alloy;1</itemStack>
+			<itemStack>libvulpes:productdust;2;7</itemStack>
+			<itemStack>jsg:plate_naquadah;3</itemStack>
+			<itemStack>jsg:circuit_control_base;1</itemStack>
+		</input>
+		<output>
+			<itemStack>jsg:circuit_control_naquadah;1</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="1200" power ="600">
+		<input>
+			<itemStack>jsg:crystal_yellow;1</itemStack>
+			<itemStack>jsg:crystal_red;1</itemStack>
+			<itemStack>jsg:crystal_ender;1</itemStack>
+			<itemStack>jsg:circuit_control_crystal;1</itemStack>
+		</input>
+		<output>
+			<itemStack>jsg:crystal_glyph_stargate;1</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="1200" power ="600">
+		<input>
+			<itemStack>jsg:crystal_red;3</itemStack>
+			<itemStack>jsg:circuit_control_crystal;1</itemStack>
+		</input>
+		<output>
+			<itemStack>jsg:crystal_glyph_milkyway;1</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="1200" power ="600">
+		<input>
+			<itemStack>jsg:crystal_blue_pegasus;1</itemStack>
+			<itemStack>jsg:crystal_blue;2</itemStack>
+			<itemStack>jsg:circuit_control_crystal;1</itemStack>
+		</input>
+		<output>
+			<itemStack>jsg:crystal_glyph_pegasus;1</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="1200" power ="600">
+		<input>
+			<itemStack>jsg:crystal_white;3</itemStack>
+			<itemStack>jsg:circuit_control_naquadah;1</itemStack>
+		</input>
+		<output>
+			<itemStack>jsg:crystal_glyph_universe;1</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="1200" power ="600">
+		<input>
+			<itemStack>jsg:crystal_yellow;1</itemStack>
+			<itemStack>jsg:crystal_red;1</itemStack>
+			<itemStack>jsg:crystal_blue;1</itemStack>
+			<itemStack>jsg:circuit_control_crystal;1</itemStack>
+		</input>
+		<output>
+			<itemStack>jsg:crystal_glyph_goauld;1</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="1200" power ="600">
+		<input>
+			<itemStack>jsg:trinium_dust;1</itemStack>
+			<itemStack>jsg:crystal_tokra;2</itemStack>
+			<itemStack>jsg:circuit_control_crystal;1</itemStack>
+		</input>
+		<output>
+			<itemStack>jsg:crystal_glyph_ori;1</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="1200" power ="600">
+		<input>
+			<itemStack>jsg:trinium_dust;2</itemStack>
+			<itemStack>jsg:crystal_blue;1</itemStack>
+			<itemStack>jsg:crystal_blue_pegasus;2</itemStack>
+			<itemStack>jsg:circuit_control_crystal;1</itemStack>
+		</input>
+		<output>
+			<itemStack>jsg:crystal_glyph_ancient;1</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="1200" power ="600">
+		<input>
+			<itemStack>jsg:crystal_red;1</itemStack>
+			<itemStack>jsg:crystal_blue_pegasus;1</itemStack>
+			<itemStack>jsg:crystal_ender;1</itemStack>
+			<itemStack>jsg:circuit_control_crystal;1</itemStack>
+		</input>
+		<output>
+			<itemStack>jsg:crystal_glyph_dhd;1</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="1200" power ="600">
+		<input>
+			<itemStack>jsg:crystal_red;1</itemStack>
+			<itemStack>jsg:crystal_blue_pegasus;1</itemStack>
+			<itemStack>jsg:crystal_ender;1</itemStack>
+			<itemStack>jsg:circuit_control_naquadah;1</itemStack>
+		</input>
+		<output>
+			<itemStack>jsg:crystal_control_pegasus_dhd;1</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="1200" power ="600">
+		<input>
+			<itemStack>jsg:naquadah_raw_dust;1</itemStack>
+			<itemStack>jsg:crystal_red;2</itemStack>
+			<itemStack>jsg:circuit_control_naquadah;1</itemStack>
+		</input>
+		<output>
+			<itemStack>jsg:crystal_upgrade_capacity;1</itemStack>
+		</output>
+	</Recipe>
+	<Recipe timeRequired="1200" power ="600">
+		<input>
+			<itemStack>jsg:trinium_dust;1</itemStack>
+			<itemStack>jsg:crystal_white;2</itemStack>
+			<itemStack>jsg:circuit_control_crystal;1</itemStack>
+		</input>
+		<output>
+			<itemStack>jsg:crystal_upgrade_efficiency;1</itemStack>
+		</output>
+	</Recipe>
+</Recipes>

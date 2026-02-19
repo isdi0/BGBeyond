@@ -1,0 +1,41 @@
+<Asteroids>
+	<asteroid name="Small asteroid" distance="35" mass="25" massVariability="1" minLevel="0" probability="3" richness="0.7" richnessVariability="0.2">
+		<ore itemStack="minecraft:iron_ore" chance="100" />
+		<ore itemStack="minecraft:redstone_ore" chance="50" />
+		<ore itemStack="minecraft:gold_ore" chance="25" />
+		<ore itemStack="thermalfoundation:ore 0" chance="75" />
+		<ore itemStack="thermalfoundation:ore 1" chance="60" />
+		<ore itemStack="thermalfoundation:ore 2" chance="20" />
+		<ore itemStack="thermalfoundation:ore 4" chance="40" />
+		<ore itemStack="thermalfoundation:ore 5" chance="15" />
+		<ore itemStack="thermalfoundation:ore 6" chance="10" />
+		<ore itemStack="thermalfoundation:ore 7" chance="5" />
+		<ore itemStack="libvulpes:ore0 8" chance="30" />
+	</asteroid>
+	<asteroid name="Medium asteroid" distance="50" mass="50" massVariability="1" minLevel="0" probability="2" richness="0.7" richnessVariability="0.2">
+		<ore itemStack="minecraft:iron_ore" chance="100" />
+		<ore itemStack="minecraft:redstone_ore" chance="50" />
+		<ore itemStack="minecraft:gold_ore" chance="25" />
+		<ore itemStack="thermalfoundation:ore 0" chance="75" />
+		<ore itemStack="thermalfoundation:ore 1" chance="60" />
+		<ore itemStack="thermalfoundation:ore 2" chance="20" />
+		<ore itemStack="thermalfoundation:ore 4" chance="40" />
+		<ore itemStack="thermalfoundation:ore 5" chance="15" />
+		<ore itemStack="thermalfoundation:ore 6" chance="10" />
+		<ore itemStack="thermalfoundation:ore 7" chance="5" />
+		<ore itemStack="libvulpes:ore0 8" chance="30" />
+	</asteroid>
+	<asteroid name="Large asteroid" distance="100" mass="100" massVariability="1" minLevel="0" probability="1" richness="0.7" richnessVariability="0.2">
+		<ore itemStack="minecraft:iron_ore" chance="100" />
+		<ore itemStack="minecraft:redstone_ore" chance="50" />
+		<ore itemStack="minecraft:gold_ore" chance="25" />
+		<ore itemStack="thermalfoundation:ore 0" chance="75" />
+		<ore itemStack="thermalfoundation:ore 1" chance="60" />
+		<ore itemStack="thermalfoundation:ore 2" chance="20" />
+		<ore itemStack="thermalfoundation:ore 4" chance="40" />
+		<ore itemStack="thermalfoundation:ore 5" chance="15" />
+		<ore itemStack="thermalfoundation:ore 6" chance="10" />
+		<ore itemStack="thermalfoundation:ore 7" chance="5" />
+		<ore itemStack="libvulpes:ore0 8" chance="30" />
+	</asteroid>
+</Asteroids>
