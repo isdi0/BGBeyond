@@ -66,7 +66,7 @@ def rfShieldBlocks = [
 def redundantIngredients = [
     fluid('titanium_molten'),
     fluid('fuelcolumn'),
-    fluid('yellorium')
+    fluid('yellorium'),
     item('mcjtylib_ng:multipart'),
     item('omlib:fake_sword'),
     item('omlib:network_cable'),
