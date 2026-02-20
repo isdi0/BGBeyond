@@ -24,9 +24,9 @@
   "Dictionary Types": [
     "WET",
     "DENSE",
+    "MOUNTAIN",
     "HILLS",
     "LUSH",
-    "MOUNTAIN",
     "JUNGLE"
   ],
   "BiomeManager Entries": {},
