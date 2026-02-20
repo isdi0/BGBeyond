@@ -221,18 +221,3 @@ mods.ticon.basin.recipeBuilder()
     .output(item('thermalfoundation:storage_alloy'))
     .cast(null)
     .coolingTime(CastingRecipe.calcCooldownTime(fluid('steel').getFluid(), 1296))
-
-for(entry in nuclearIngots) {
-    crafting.removeByOutput(entry)
-    Furnace.removeByOutput(entry)
-    mods.thermal.Furnace.removeByOutput(entry)
-    mods.thermal.Smelter.removeByOutput(entry)
-}
-for(entry in nuclearDusts) {
-    mods.thermal.Pulverizer.removeByOutput(entry)
-}
-for(entry in nuclearBlocks) {
-    crafting.removeByOutput(entry)
-    mods.thermal.Factorizer.removeByOutput(entry)
-    mods.thermal.Factorizer.removeByInput(entry)
-}
