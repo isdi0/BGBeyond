@@ -79,7 +79,7 @@ def redundantIngredients = [
     item('appliedenergistics2:material', 51), // Gold dust already covered by thermal
     item('appliedenergistics2:material', 49), // Iron dust already covered by thermal
     item('thermalfoundation:material', 22), // Wooden gear covered by AE2
-    item('bigreactors:oreyellorite')
+    item('bigreactors:oreyellorite'),
     rfShieldBlocks,
     commonItems, 
     commonMetals,
