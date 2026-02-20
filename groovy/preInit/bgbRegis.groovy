@@ -22,6 +22,23 @@ content.createFluid('titanium')
 .setTemperature(776)
 .register()
 
+// Create pyrotheum slag
+// fluid
+content.createFluid('pyrotheum_slag')
+.setColor(0x262626)
+.setDensity(4500)
+.setLavaMaterial()
+.setSound(sound('minecraft:item.bucket.fill_lava'), sound('minecraft:item.bucket.empty_lava'))
+.setViscosity(10000)
+.setLuminosity(15)
+.setTemperature(1500)
+.register()
+
+// item
+content.createItem('pyrotheum_slag')
+.setCreativeTab(creativeTab('misc'))
+.register()
+
 // Create silicon carbide
 content.createItem('sic_dust')
 .setRarity(EnumRarity.COMMON)

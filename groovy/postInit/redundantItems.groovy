@@ -48,7 +48,8 @@ def redundantIngredients = [
     item('tconstruct:common_metal', 4),
     item('appliedenergistics2:material', 51), // Gold dust already covered by thermal
     item('appliedenergistics2:material', 49), // Iron dust already covered by thermal
-    item('thermalfoundation:material', 22) // Wooden gear covered by AE2
+    item('thermalfoundation:material', 22), // Wooden gear covered by AE2
+    item('bigreactors:oreyellorite')
 ]
 
 def commonItems = [
@@ -201,4 +202,39 @@ mods.thermal.crucible.removeByOutput(fluid('titanium_molten'))
 
 for (item in redundantIngredients) {
     mods.jei.ingredient.removeAndHide(item)
+}
+
+def nuclearIngots = [
+    item('bigreactors:ingotyellorium'),
+    item('bigreactors:ingotcyanite'),
+    item('bigreactors:ingotblutonium')
+]
+def nuclearDusts = [
+    item('bigreactors:dustyellorium'),
+    item('bigreactors:dustcyanite'),
+    item('bigreactors:dustblutonium'),
+    item('bigreactors:dustludicrite')
+]
+def nuclearBlocks = [
+    item('bigreactors:blockyellorium'),
+    item('bigreactors:blockcyanite'),
+    item('bigreactors:blockblutonium')
+]
+
+for(entry in nuclearIngots) {
+    crafting.removeByOutput(entry)
+    Furnace.removeByOutput(entry)
+    mods.thermal.Furnace.removeByOutput(entry)
+    mods.thermal.Smelter.removeByOutput(entry)
+    mods.jei.ingredient.removeAndHide(entry)
+}
+for(entry in nuclearDusts) {
+    mods.thermal.Pulverizer.removeByOutput(entry)
+    mods.jei.ingredient.removeAndHide(entry)
+}
+for(entry in nuclearBlocks) {
+    crafting.removeByOutput(entry)
+    mods.thermal.Factorizer.removeByOutput(entry)
+    mods.thermal.Factorizer.removeByInput(entry)
+    mods.jei.ingredient.removeAndHide(entry)
 }

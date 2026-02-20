@@ -28,6 +28,7 @@ steel                                             (tconstruct:molten_steel)     
 aluminum                                          (tconstruct:molten_aluminum)                                                     = Molten Aluminum
 anorthite                                         (bgbeyond:anorthite)                                                             = Molten Anorthite
 titanium                                          (bgbeyond:titanium)                                                              = Molten Titanium
+pyrotheum_slag                                    (bgbeyond:pyrotheum_slag)                                                        = fluid.bgbeyond.pyrotheum_slag.name
 sand                                              (biomesoplenty:sand)                                                             = Quicksand
 honey                                             (biomesoplenty:honey)                                                            = Honey
 blood                                             (biomesoplenty:blood)                                                            = Blood
@@ -105,7 +106,7 @@ silicon_molten_yellow                             (jsg:silicon_molten_yellow)   
 silicon_molten_white                              (jsg:silicon_molten_white)                                                       = Refined Silicon
 naquadah_molten_raw                               (jsg:naquadah_molten_raw)                                                        = Liquid Bismuth
 naquadah_molten_refined                           (jsg:naquadah_molten_refined)                                                    = Refined Bismuth
-naquadah_molten_alloy                             (jsg:naquadah_molten_alloy)                                                      = Liquid Bismanum
+naquadah_molten_alloy                             (jsg:naquadah_molten_alloy)                                                      = Liquid Bislunium
 titanium_molten                                   (jsg:titanium_molten)                                                            = Molten Titanium
 trinium_molten                                    (jsg:trinium_molten)                                                             = Molten Trinium
 oxygen                                            (advancedrocketry:oxygenfluid)                                                   = Oxygen
