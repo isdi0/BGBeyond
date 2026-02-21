@@ -1,6 +1,0 @@
-
-{
-  "Name": "redstone_spider",
-  "Registry ID": "muchmorespiders:redstone_spider",
-  "Class": "muchmorespiders.common.entity.EntityRedstoneSpider"
-}
