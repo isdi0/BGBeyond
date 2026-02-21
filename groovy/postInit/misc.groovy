@@ -79,3 +79,7 @@ for(int i = 0; i < 7; i++) {
     oredict.add('blockGlassReinforced', item('thermalfoundation:glass_alloy', i))
     oredict.add('blockGlassAlloyReinforced', item('thermalfoundation:glass_alloy', i))
 }
+
+// Add pyrotheum slag to oredict
+oredict.add('itemPyrotheumSlag', item('bgbeyond:pyrotheum_slag'))
+oredict.add('crystalPyrotheumSlag', item('bgbeyond:pyrotheum_slag'))
