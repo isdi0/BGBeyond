@@ -1,8 +1,8 @@
 {
-  "packName": "Boldly Going Beyond",
+  "packName": "Eridanus Epsilon",
   "packId": "bgbeyond",
-  "author": "eridanisys",
-  "version": "0.3.2",
+  "author": "systerdani",
+  "version": "2.0.0",
   "debug": false,
   "loaders": {
     "preInit": [

@@ -1,6 +1,0 @@
-
-{
-  "Name": "nether_zombie",
-  "Registry ID": "mozombies_wave:nether_zombie",
-  "Class": "wily.mozombieswave.entity.EntityNetherZombie"
-}
