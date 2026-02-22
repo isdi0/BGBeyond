@@ -1,0 +1,15 @@
+
+setIcon("minecraft:grass")
+
+setTranslatedTitle("advancements.bgbeyond.core.root.title")
+
+setTranslatedDescription("advancements.bgbeyond.core.root.description")
+
+setBackground("bgbeyond:textures/blocks/orlin_alloy_block.png")
+
+setShowToast(false)
+
+setAnnounceToChat(false)
+
+criteria = addCriteria("crafting_station", "minecraft:inventory_changed")
+criteria.addItem("thermalfoundation:material", "meta:1024")
